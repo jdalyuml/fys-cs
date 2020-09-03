@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\usepackage{datetime}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+
+\newcommand{\hwno}{2}
+\newcommand{\duemonth}{9}
+\newcommand{\duedate}{30}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\title{Homework \hwno: No Silver Bullet}
+\date{Due: \dayofweekname{\duedate}{\duemonth}{\year}, \monthname[\duemonth] \duedate, 5pm}
+
+\begin{document}
+\maketitle
+
+For this assignment, you will read about some of the ways that making software can be made easier and how effective that it can be.
+
+Read \emph{APIs, Standards, and Enabling Infrastructure} by Vinton Cerf and \emph{No Silver Bullet - Essence and Accident in Software Engineering} by Fred Brooks.
+Afterwards, write a short response in which you answer the following questions:
+
+\begin{itemize}
+	\item What does Brooks mean by ``essential'' and ``accidental'' difficulties?
+	\item In what ways does reusing existing software libraries and packages increase productivity?
+	\item How does having standardized APIs enable modern software.
+\end{itemize}
+
+Remember that Brooks wrote his article in 1986 and was making predictions about the future whereas Cerf wrote his in 2019 and talks about how systems had already been developed.
+Many of the technologies that Brooks talks about in the future tense have already become common place.
+In particular, Brooks uses \href{https://en.wikipedia.org/wiki/High-level_programming_language}{``high-level language''}  to refer to any language that abstracts parts of the underlying hardware whereas nowadays most people use the term to refer to languages that completely abstract the underlying hardware, usually by using some sort of \href{https://en.wikipedia.org/wiki/Virtual_machine}{virtual machine}.
+
+Submit your response on Blackboard.
+
+\end{document}
