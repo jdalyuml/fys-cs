@@ -13,7 +13,8 @@
 .*.lb
 
 ##Generated output
-*.pdf
+hw*.pdf
+syllabus.pdf
 
 ## Intermediate documents:
 *.dvi

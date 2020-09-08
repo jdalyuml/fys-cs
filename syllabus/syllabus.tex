@@ -1,0 +1,245 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath, amssymb, graphics, verbatim, alltt, listings,
+  framed, enumitem, hyperref}
+\usepackage{soul}
+\input{Syllabus-parts/Defs}% \courseno \coursename \semester
+\newcommand{\mathsym}[1]{{}}
+\newcommand{\unicode}[1]{{}}
+\pagestyle{myheadings}
+\markright{
+  \courseno{} \coursename \\ UMASS - Lowell \\ \semester
+}
+\addtolength{\oddsidemargin}{-0.875in}
+\addtolength{\evensidemargin}{-0.875in}
+\addtolength{\textwidth}{1.75in}
+\addtolength{\topmargin}{-0.875in}
+\addtolength{\textheight}{1.75in}
+\begin{document}
+  \begin{center}\Huge
+
+  \end{center}
+  \begin{enumerate}
+    \item {\bf Course Number and Title:} \courseno{} \fullcoursename{}
+    \item {\bf Instructor's Name:} Dr. James Daly.\quad{}email:
+      \url{mailto:james_daly@cs.uml.edu} \\\\
+      Please inculde the course number and section in the subject of
+      your email.
+    \item {\bf Instructor's Office:} DAN-347
+    \item {\bf Office Hours:} 
+      \input{Syllabus-parts/OfficeHours}
+%    \item {\bf Rationale:} 
+%      \input{Syllabus-parts/Rationale}
+    \item {\bf Course Description:} 
+      \input{Syllabus-parts/Description}
+%    \item {\bf Course Competencies:}  
+%      \input{Syllabus-parts/Objectives}
+%    \item {\bf Essential Questions:} 
+%       \input{Syllabus-parts/EssentialQuest}
+      \input{Syllabus-parts/Outcomes}
+    \item {\bf Date, Time and location:} 
+      \input{Syllabus-parts/DateTimeLocation}
+    \item {\bf Required Textbook:} 
+      \input{Syllabus-parts/RequiredBooks}
+    \item {\bf Recommended Books:}
+      \input{Syllabus-parts/RecommendedBooks}
+         \item {\bf Evaluation Methodology:}\\
+       \input{Syllabus-parts/Evaluation}
+     \item {\bf Due Dates:} 
+       \input{Syllabus-parts/DueDates}
+     \item {\bf Exams:} 
+       \input{Syllabus-parts/Exams}
+    \item {\bf Course Expectations:}
+       \begin{enumerate}[label=\alph*.]
+         \item {\bf Attendance:}
+           The classroom is the heart of the educational experience
+           because it provides, uniquely, a formal 
+           setting for the important exchanges among faculty and
+           students. Regular and punctual attendance at all classes,
+           essential for maximum academic achievement, is a major
+           responsibility of the students. Failure to
+           attend and contribute to the classroom environment
+           significantly and demonstrably reduces the quality of the
+           educational experience for everyone in the classroom. As a
+           result, absences almost always impact the quality of
+           performance.  Students are expected to arrive on-time and
+           with all required material for the taking of notes (pencil
+           and notebook preferred).
+%           Each unexcused absence  will result in the student's
+%           final grade being reduced by $1\%$. Three unexcused
+%           absences are permitted during the semester.  Additional
+%           unexcused absences may result in a failing grade and/or
+%           removal from the course. Additionally, each
+%           tardiness (for any reason) will count as one half of
+%           an absence. An unexcused absence occurring on a day when
+%           an exam or quiz is given will result in a grade of zero. In
+%           the case of an excused absence, it is the student's
+%           responsibility to work with the instructor to schedule a
+%           makeup exam.  It is always in the student's best interest
+%           not to miss the regularly scheduled in-class exam.\\\\ 
+%           In the event of prolonged illness, accident, or similar
+%           emergency, it is the responsibility of the student to
+%           notify the instructor. Students must remember
+%           that it is always their 
+%           responsibility to make up the work they may have missed
+%           during an absence from class. Students are directed to
+%           confer with their instructor when their absences jeopardize
+%           satisfactory progress.\\\\ 
+         \item {\bf Academic Honesty Policy:}
+           Integrity and honesty are extremely important qualities of
+           any academic or professional person.  That being said,
+           science is a collaborative effort. I encourage students to
+           discuss course material outside of class and form study
+           groups for exams and quizzes. {\bf However, you must do the
+           homework by yourself. If you need help, I will be happy to
+           help you!}. 
+           %You may also seek assistance from the course  Teaching Assistants.
+           \\\\
+           {\bf The use of material from previous classes, solution
+             manuals, material from the Internet or other sources (e.g.,
+             parents, siblings, friends, etc.) that directly bears on
+             the answer is strictly prohibited.}\\\\ 
+           Examples of academic
+           misconduct include copying from another student's exam,
+           using unauthorized information from notes, calculators,
+           phones, or computers during exams, copying all or part of
+           another student's assignments such as code or diagrams and
+           providing one's work to other students for their use.
+           These examples are not exhaustive. \\\\
+           The Computer Science Department considers any instance of
+           academic misconduct to be a serious offense.  The penalty
+           for an instance of academic misconduct may include, among
+           other things, a zero for the assignment(s) in question, a
+           failing grade for the course in question, or expulsion from
+           the University.\\\\  
+           Allowing another student to examine and/or copy your work
+           constitutes an instance of academic misconduct both by you
+           and by the other student. Thus academic misconduct includes
+           not only taking others' work and submitting it as your own,
+           but also allowing others to use your work or submit your
+           work as their own. Students allowing others to copy their
+           work will be charged with academic misconduct. They are
+           subject to the same penalties listed.  Each student is
+           responsible for safeguarding his/her own work.  The use of
+           a personal flash drive is recommenced if you will be using
+           a shared computer.\\\\  
+           Examining and/or copying the work of another without their
+           permission constitutes, in itself, a separate instance of
+           academic misconduct. Thus it is not permissible to examine
+           the work of others which is found either in printed form,
+           as in a lab, or in electronic form, as on a public hard
+           drive. Students who take the work of others in this manner
+           will be charged with academic misconduct. They are subject
+           to the same penalties listed above.\\\\
+         \item {\bf Lecture Notes and Handouts:}
+           Only a part of the lecture notes will be available in
+           traditional digital-file formats (*.doc, *.ppt, and *.pdf)
+           on the BlackBoard site related to our course:
+           \url{https://uml.edu/myuml}.  Some handouts 
+           will be distributed in class and some notes will be written
+           on the classroom board.  Please, take notes every class and
+           share the notes if someone needs them.  \\\\
+         \item {\bf University Email System:}
+           The University of Massachusetts - Lowell has established a University
+           electronic mail (``email'') system as a means of the University
+           sending official information to enrolled students, and for
+           students to send communication to their instructors and
+           University personnel. All registered students will be
+           assigned a University email account/address to be used as the
+           only email address for all email communication: 1) sent to
+           the students from their instructors and from all University
+           personnel; and, 2) sent by the students to their
+           instructors and to all University personnel. \\\\
+           In addition:\\
+           \begin{enumerate}
+           \item[$\bullet$] Students should check their University email
+             account regularly to ensure they are staying current with
+             all official communications. Official communication
+             includes, but is not limited to, policy announcements,
+             registration and billing information, schedule changes,
+             emergency notifications and other critical and time
+             sensitive information.  
+           \item[$\bullet$] Students should also check their University
+             email account to be sure that they are current with all
+             email communication from their faculty.  
+           \item[$\bullet$] The student email account/address should be
+             the only e-mail address students use to send email to
+             faculty and University personnel so that student email is
+             recognized and opened. 
+           \item[$\bullet$] Accounts are for individual use
+             only, and are not transferable or to be used by any other
+             individual.  
+           \end{enumerate}
+
+         \item {\bf Electronic Devices:}
+           Regarding the use of electronic devices (such as cell
+           phones, PDAs, pagers, MP3/iPods, laptops, etc.), students
+           may not use these or other electronic devices during class
+           unless permitted by the course instructor. If use of these
+           devices is permitted by the instructor, they are to be used
+           for appropriate class activities only. Augmentative communication
+           devices are excluded from this policy (please refer to the
+           Student Handbook policy on disability regarding these). If
+           an emergency situation requires students to leave a cell
+           phone on, they should inform the course instructor at the
+           beginning of the class and leave the phone in a
+           non-intrusive mode so as not to disrupt the class.
+           In this class, {\bf NO electronic devices are permitted}
+           during quizzes or exams.  \\\\
+         \item {\bf Plagiarism Policy: }
+           Plagiarism is a serious violation of a student's academic
+           integrity and the trust between a student and his or her
+           teachers. Plagiarism is the act of a person presenting
+           another person's work as if it were his or her own
+           original work. Such acts of plagiarism include, but are
+           not limited to: 
+           \begin{enumerate}
+           \item[1.] A student submitting as his or her own work an
+             entire essay or other assignment written by another
+             person. 
+           \item[2.] A student taking word for word a section or
+             sections of another person's work without proper
+             acknowledgment of the source and that the material is
+             quoted. 
+           \item[3.] A student using statistics or other such facts
+             or insights as if these were the result of the
+             student's efforts and thus lacking proper
+             acknowledgment of the original source. 
+           \item[4.] The paraphrasing of another person's unique
+             work with no acknowledgment of the original source. 
+           \item[5.] Copying another student's work on a quiz or
+             test. 
+           \end{enumerate}
+
+           When a student is found to have plagiarized an academic
+           assignment, it will be up to each instructor to determine
+           the penalty. Depending on the severity of the incident,
+           this could range from a warning to a loss of credit for
+           the assignment. In all cases of plagiarism, the student's
+           program coordinator will automatically be notified and
+           the incident will be documented. If any further incidents
+           of plagiarism are reported to the student's program
+           coordinator, additional sanctions will be imposed. These
+           may include notification of the Dean; loss of credit for
+           the course; 
+           suspension or dismissal from a department program;
+           academic probation; and/or expulsion from the
+           University. \\\\
+           Additional information regarding University Policies is
+           available:
+           \begin{enumerate}
+             \item Academic Policies:\\\\
+               \url{https://www.uml.edu/Catalog/Undergraduate/Policies/Academic-Policies/Academic-Policies.aspx} \\\\
+               \item Kennedy College of Sciences Policies:\\\\
+                 \url{https://www.uml.edu/Catalog/Undergraduate/Sciences/policy/default.aspx}  \\\\
+               \item Computer Science Department Policies:\\\\
+                 \url{https://www.uml.edu/Catalog/Undergraduate/Sciences/policy/Continuance-appeal-dismissal.aspx}\\\\
+                 \item Advising Resources:\\\\
+                   \url{https://www.uml.edu/Academics/Provost-office/Faculty-success/Professional-Engagement/advising-resources.aspx}  \\\\
+
+           \end{enumerate}
+       \end{enumerate}
+     \item {\bf Schedule} (subject to adjustment):\\
+       \input{Syllabus-parts/Schedule}
+      % \input{Syllabus-parts/Weeks}
+  \end{enumerate}
+\end{document}
