@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+
+\usepackage{datetime}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{enumerate}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{xspace}
+
+\newcommand{\hwno}{6}
+\newcommand{\duemonth}{12}
+\newcommand{\duedate}{9}
+
+\newcommand{\code}[1]{\texttt{#1}}
+
+\newcommand{\filename}{\code{rjcount.sh}\xspace}
+
+\title{Homework \hwno: Bash Scripting}
+\date{Due: \dayofweekname{\duedate}{\duemonth}{\year}, \monthname[\duemonth] \duedate, 5pm}
+
+\begin{document}
+\maketitle
+
+In this homework, you will write a simple script to determine how many times that Romeo and Juliet are mentioned get in \emph{Romeo and Juliet} by William Shakespeare.
+
+By now, you should have been exposed to Linux in your Computing I course.  If you haven't, then you should complete the Linux tutorial at \url{http://www.cs.uml.edu/~dlipman/linux-tutorial/} before getting started.
+
+% Connect to cs.uml.edu using Putty and FileZilla.
+
+% Count the number of lines that Romeo and Juliet get
+
+\section*{Scripting Basics}
+As mentioned in the Linux Tutorial, Bash (Bourne-Again SHell) is a common command language interpreter on Linux environments.
+For tasks that they expect to do often, people will often create shell scripts (\code{.sh} files) that they can use to repeat the task.
+These scripts will contain a list of commands that will be run in sequence.
+
+Create a file named \filename.  Save the \code{romeo.txt} file in the same directory.
+
+\section*{The Whole Shebang}
+
+Script files begin with a \emph{shebang} (hash-bang) that instructs which interpreter it was designed to run with (the file extension only hints at how it will be run rather than dictating it).
+This will be in the form \code{\#!<interpreter> [optional-args]}.
+Since we are writing a Bash script, we use \code{\#!/bin/bash}.
+Put this as the \textbf{\textcolor{red}{first}} line of your script.
+
+In the Bourne shell language, lines that begin with \code{\#} are comments.
+Thus, the shebang is ignored by the interpreter itself when executing your script.
+You can also use \# to add comments or descriptions to your script.
+However, the command environment only looks at the first line when determining which interpreter to use, so the shebang must be on the first line.
+
+
+You will also see \code{/bin/sh} used instead of \code{/bin/bash}.
+However, there are many other shells (such as the Korn shell (ksh), Almquish shell (ash), Z shell (zsh) and C shell (csh)).
+Thus, \code{/bin/sh} may be configured to point to one of these other shells instead, which would cause problems if you use Bash-only features.
+Thus, it is better to explicitly list which interpreter you wish to use.
+
+\section*{Execution test}
+Add the line \code{echo Hello world} to your script, then run it by typing \code{./\filename} into the terminal 
+(the initial \code{./} tells it to run a script in the current directory rather than looking where programs are usually stored).
+If you get a permission denied error, you can use \code{chmod +x \filename} to add eXecutable permissions to the file.
+Once you've verified that you can run the script, you can remove the \code{echo} command.
+
+\section*{Simple Commands}
+You can add simple commands, like \href{https://en.wikipedia.org/wiki/Echo_(command)}{\code{echo}} or \href{https://en.wikipedia.org/wiki/Wc_(Unix)}{\code{wc}} to do tasks like output a string or count the lines of a file.
+Use the \code{wc} command to output the number of lines in the \code{romeo.txt} file.
+You will need to use the \code{-l} flag to do this.
+During this exercise, we will add to this command to output the number of lines that either Romeo or Juliet get.
+
+Remember that if you forgot how to use a particular command, you can use the \href{https://en.wikipedia.org/wiki/Man_page}{\code{man}} on the \emph{terminal} (not the script) to look up the manual page for a particular command.
+If you forgot which command does something, you can try to use the \href{https://en.wikipedia.org/wiki/Apropos_(Unix)}{\code{apropos}} (from the French ``\`{a} propos'' meaning ``about'') command to search for an appropriate command.
+
+\section*{Piping}
+It is often handy to take the results of one program and use them as input for another program.
+You can use the pipe operator (\code{|}) to pass the output from one program to another.
+For example, \code{ls | wc -l} will count how many files are in the current directory.
+
+Other times, we might want to read to or write from a file.
+You can use the \code{<} operator to read from a file and the \code{>} operator to write to a file.
+For example, \code{ls > files.txt} will write the names of all of the files into \code{files.txt} and \code{wc -l files.txt} will count how many lines end up in that file.
+
+You can use piping to count the number of lines in \code{romeo.txt}.
+
+\section*{Grep}
+
+\href{https://en.wikipedia.org/wiki/Grep}{\code{grep}} is a powerful utility that allows you to find lines in a file that match a particular \href{https://en.wikipedia.org/wiki/Regular_expression}{regular expression}.
+We're just going to look for particular words rather than fitting patterns, so we won't be using its full power.
+The basic usage is \code{grep <pattern> <filename>}.
+For example, we could use \code{grep Smith members.txt} to find all of the people named Smith in a list of club members.
+We could also output redirection to get input from another command, so \code{ls | grep hw} would list all homework in the current directory.
+
+The default is case-sensitive.
+You can use the \code{-i} flag to do case-insensitive matching.
+
+You can now use \code{grep} to count the number of lines mentioning Romeo.
+
+\section*{Variables}
+
+Sometimes you need to store the result of a calculation in a variable.
+We can set our own variables with \code{<varname>=<value>} but we \emph{use} them by putting a \code{\$} in front of the variable name.
+For example, we can set a message with \code{msg=World} and print it with \code{echo Hello \$msg}.
+
+There are some special variables.
+\code{\$0} is the name of the script, \code{\$1} is its first argument, \code{\$2} is the second, and so on.
+For example, if you ran \code{script.sh Hi 5} then \code{\$1} would evaluate to \code{Hi} and \code{\$2} would evaluate to \code{5}.
+
+Use variables so that the user can enter the character to find and the file to search through.
+For example, running \code{./rjcount Romeo romeo.txt'} should print 301 and \code{./rjcount Juliet romeo.txt'} should print 181.
+If you have received 121 and 47, remember to do a case-insensitive search.
+
+\section*{Submission}
+
+Submit your completed \filename script on Blackboard.
+
+\end{document}
