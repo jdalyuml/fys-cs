@@ -19,7 +19,7 @@
 
 \newcommand{\code}[1]{\texttt{#1}}
 
-\newcommand{\filename}{\code{rjcount.sh}\xspace}
+\newcommand{\filename}{\code{rjcount.bash}\xspace}
 
 \title{Homework \hwno: Bash Scripting}
 \date{Due: \dayofweekname{\duedate}{\duemonth}{\year}, \monthname[\duemonth] \duedate, 5pm}
@@ -46,10 +46,10 @@ I use \href{https://filezilla-project.org/}{FileZilla} for this purpose.
 
 \section*{Scripting Basics}
 As mentioned in the Linux Tutorial, Bash (Bourne-Again SHell) is a common command language interpreter on Linux environments.
-For tasks that they expect to do often, people will often create shell scripts (\code{.sh} files) that they can use to repeat the task.
+For tasks that they expect to do often, people will often create shell scripts (\code{.sh} or \code{.bash} files) that they can use to repeat the task.
 These scripts will contain a list of commands that will be run in sequence.
 
-Create a file named \filename.  Save the \code{romeo.txt} file in the same directory.
+Create a file named \filename (Blackboard does not accept \code{.sh} files).  Save the \code{romeo.txt} file in the same directory.
 
 \section*{The Whole Shebang}
 
@@ -119,7 +119,7 @@ There are some special variables.
 For example, if you ran \code{script.sh Hi 5} then \code{\$1} would evaluate to \code{Hi} and \code{\$2} would evaluate to \code{5}.
 
 Use variables so that the user can enter the character to find and the file to search through.
-For example, running \code{./rjcount Romeo romeo.txt'} should print 301 and \code{./rjcount Juliet romeo.txt'} should print 181.
+For example, running \code{./\filename Romeo romeo.txt} should print 301 and \code{./\filename Juliet romeo.txt} should print 181.
 If you have received 121 and 47, remember to do a case-insensitive search.
 
 \section*{Submission}
